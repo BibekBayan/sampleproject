@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Layout</title>
+
+    <style>
+
+    * {
+
+        margin: 0;
+
+        padding: 0;
+
+        box-sizing: border-box;
+
+    }
+
+   
+
+    body {
+
+        font-family: Arial, sans-serif;
+
+    }
+
+   
+
+    .container {
+
+        display: grid;
+
+        grid-template-areas:
+
+            "logo header header"
+
+            "nav content content"
+
+            "footer footer footer";
+
+        grid-template-columns: 1fr 3fr;
+
+        grid-template-rows: auto 1fr auto;
+
+        height: 100vh;
+
+    }
+
+   
+
+    header {
+
+        grid-area: header;
+
+        display: flex;
+
+        flex-direction: column;
+
+        background-color: lightgreen;
+
+        padding: 10px;
+
+    }
+
+   
+
+    .logo {
+
+        grid-area: logo;
+
+        background-color: green;
+
+        padding: 10px;
+
+        color: white;
+
+        text-align: center;
+
+    }
+
+   
+
+    .top-bar {
+
+        background-color: darkgreen;
+
+        color: white;
+
+        padding: 10px;
+
+        margin-bottom: 5px;
+
+    }
+
+   
+
+    .nav-bar {
+
+        display: flex;
+
+        gap: 10px;
+
+        justify-content: space-between;
+
+    }
+
+   
+
+    .nav-bar span {
+
+        background-color: lightgreen;
+
+        padding: 5px;
+
+        flex: 1;
+
+        text-align: center;
+
+        border: 1px solid green;
+
+    }
+
+   
+
+    .main {
+
+        display: flex;
+
+        grid-area: content;
+
+        padding: 10px;
+
+    }
+
+   
+
+    .navigation {
+
+        width: 25%;
+
+        background-color: lightgray;
+
+        padding: 20px;
+
+    }
+
+   
+
+    .content-area {
+
+        display: flex;
+
+        flex-direction: column;
+
+        width: 75%;
+
+    }
+
+   
+
+    .content {
+
+        flex: 3;
+
+        background-color: white;
+
+        padding: 20px;
+
+        border: 1px solid lightgray;
+
+    }
+
+   
+
+    .white-space {
+
+        flex: 1;
+
+        padding: 20px;
+
+    }
+
+   
+
+    footer {
+
+        grid-area: footer;
+
+        background-color: green;
+
+        color: white;
+
+        text-align: center;
+
+        padding: 10px;
+
+    }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <div class="logo">LOGO</div>
+
+            <div class="header-content">
+
+                <div class="top-bar">Top Bar</div>
+
+                <div class="nav-bar">
+
+                    <span>Nav Item 1</span>
+
+                    <span>Nav Item 2</span>
+
+                    <span>Nav Item 3</span>
+
+                    <span>Nav Item 4</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <div class="main">
+
+            <aside class="navigation">Navigation</aside>
+
+            <div class="content-area">
+
+                <div class="content">Content</div>
+
+                <div class="white-space">White Space</div>
+
+            </div>
+
+        </div>
+
+        <footer>Footer</footer>
+
+    </div>
+
+</body>
+
+</html>
